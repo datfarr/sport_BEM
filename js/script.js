@@ -29,4 +29,26 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+
+
+    // for modal window (common function)
+    let modal = document.getElementById("commonModal");
+    let btn = document.getElementById("cnsltn");
+    let closeBtn = document.getElementById("closeBtn");
+
+    
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
 });
